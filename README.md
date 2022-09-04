@@ -108,6 +108,8 @@ Qubit | Probability: 0.4999999701976776, Mesured: 1
 Qubit | Probability: 0.4999999701976776, Mesured: l
 ```
 
+![wall](./images/bell.png)
+
 Adding an additional `X` gate to the second Qubit.
 
 ```bash
