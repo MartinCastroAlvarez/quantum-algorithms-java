@@ -73,7 +73,7 @@ mvn clean javafx:run --quiet --file superposition.xml
 Qubit | Probability: 0.4999999701976776, Mesured: 0
 ```
 
-![wall](./images/superposition.jpg)
+![wall](./images/superposition.png)
 
 ### Quantum Entanglement
 
@@ -87,7 +87,7 @@ Qubit | Probability: 0.0, Mesured: 0
 Qubit | Probability: 0.0, Mesured: 0
 ```
 
-![wall](./images/entanglement.jpg)
+![wall](./images/entanglement.png)
 
 ### Bell State
 
@@ -101,7 +101,7 @@ Qubit | Probability: 0.4999999701976776, Mesured: 0
 Qubit | Probability: 0.4999999701976776, Mesured: 0
 ```
 
-![wall](./images/bell.jpg)
+![wall](./images/bell.png)
 
 ### Quantum Teleportation
 
