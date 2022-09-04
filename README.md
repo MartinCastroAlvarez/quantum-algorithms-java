@@ -6,6 +6,7 @@ Quantum Algorithms with Java and Strange
 ## References
 
 - [Strange](https://github.com/redfx-quantum/strange)
+- [StrangeFX](https://github.com/redfx-quantum/strangefx)
 - [Quantum Computing samples in Java](https://github.com/johanvos/quantumjava)
 - [How to Install Maven on Linux (Ubuntu)](https://www.digitalocean.com/community/tutorials/install-maven-linux-ubuntu)
 
@@ -63,18 +64,51 @@ mvn -version
 
 ### Quantum Superposition
 
+Putting a Qubit into superposition using a `Hadarmard` gate.
+
 ```bash
-mvn clean javafx:run --file superposition.xml
+mvn clean javafx:run --quiet --file superposition.xml
 ```
+```bash
+Qubit | Probability: 0.4999999701976776, Mesured: 0
+```
+
+![wall](./images/superposition.jpg)
 
 ### Quantum Entanglement
 
+Entangling 2 Qubits using a `CNOT` gate.
+
 ```bash
-mvn clean javafx:run --file entanglement.xml
+mvn clean javafx:run --quiet --file entanglement.xml
 ```
+```bash
+Qubit | Probability: 0.0, Mesured: 0
+Qubit | Probability: 0.0, Mesured: 0
+```
+
+![wall](./images/entanglement.jpg)
+
+### Bell State
+
+Entangling 2 Qubits in superposition to create a Bell state using a `Hadamard` gate and a `CNOT` gate.
+
+```bash
+mvn clean javafx:run --quiet --file bell.xml
+```
+```bash
+Qubit | Probability: 0.4999999701976776, Mesured: 0
+Qubit | Probability: 0.4999999701976776, Mesured: 0
+```
+
+![wall](./images/bell.jpg)
 
 ### Quantum Teleportation
 
 ```bash
-mvn clean javafx:run --file teleportation.xml
+mvn clean javafx:run --quiet --file teleportation.xml
 ```
+```bash
+```
+
+![wall](./images/teleportation.jpg)

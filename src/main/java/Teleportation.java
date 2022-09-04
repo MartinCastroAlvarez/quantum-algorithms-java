@@ -4,7 +4,7 @@ import org.redfx.strange.local.SimpleQuantumExecutionEnvironment;
 
 import java.util.Arrays;
 
-public class Teleport {
+public class Teleportation {
 
     public static void main(String[] args) {
         Program p = new Program(2);
