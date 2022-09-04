@@ -97,21 +97,35 @@ Entangling 2 Qubits in superposition to create a Bell state using a `Hadamard` g
 mvn clean javafx:run --quiet --file bell.xml
 ```
 
-This results on both Qubits being either 0 or 1.
+This results on both Qubits being either 0 or 1 50% of the time.
 
 ```bash
 Qubit | Probability: 0.4999999701976776, Mesured: 0
 Qubit | Probability: 0.4999999701976776, Mesured: 0
 ```
-
-or
-
 ```bash
 Qubit | Probability: 0.4999999701976776, Mesured: 1
 Qubit | Probability: 0.4999999701976776, Mesured: l
 ```
 
-![wall](./images/bell.png)
+Adding an additional `X` gate to the second Qubit.
+
+```bash
+mvn clean javafx:run --quiet --file bell2.xml
+```
+
+It causes the Qubits to be measures as either 0 and 1 or 1 and 0 50% of the time.
+
+```bash
+Qubit | Probability: 0.4999999701976776, Mesured: 0
+Qubit | Probability: 0.4999999701976776, Mesured: 1
+```
+```bash
+Qubit | Probability: 0.4999999701976776, Mesured: 1
+Qubit | Probability: 0.4999999701976776, Mesured: 0
+```
+
+![wall](./images/bell2.png)
 
 ### Quantum Teleportation
 
