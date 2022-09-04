@@ -146,7 +146,7 @@ Qubit | Probability: 0.4999999403953552, Mesured: 1
 Qubit | Probability: 0.0, Mesured: 0
 ```
 
-![wall](./images/teleport.jpg)
+![wall](./images/teleport.png)
 
 Now, initializing the first Qubit to 1.
 
@@ -162,7 +162,7 @@ Qubit | Probability: 0.4999999403953552, Mesured: 0
 Qubit | Probability: 0.9999998807907104, Mesured: 1
 ```
 
-![wall](./images/teleport1.jpg)
+![wall](./images/teleport1.png)
 
 Now, initializing the first Qubit to 53%.
 
@@ -178,5 +178,5 @@ Qubit | Probability: 0.4999999403953552, Mesured: 0
 Qubit | Probability: 0.7190999388694763, Mesured: 0
 ```
 
-![wall](./images/teleport53.jpg)
+![wall](./images/teleport53.png)
 
