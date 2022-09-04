@@ -180,3 +180,28 @@ Qubit | Probability: 0.7190999388694763, Mesured: 0
 
 ![wall](./images/teleport53.png)
 
+### Quantum Network
+
+Creating a network of Qubits by concatenating multiple Quantum Teleporters.
+
+```bash
+mvn clean javafx:run --quiet --file network.xml
+```
+
+The message `0.21` is teleported from Alice to Bob across a larger distance after applying the formula `1 - 0.21 * 0.21 = 0.9558`
+
+```bash
+Qubit | Probability: 0.4999998528510332, Mesured: 1
+Qubit | Probability: 0.4999998528510332, Mesured: 1
+Qubit | Probability: 0.4999998528510332, Mesured: 1
+Qubit | Probability: 0.4999998528510332, Mesured: 1
+Qubit | Probability: 0.4999998528510332, Mesured: 1
+Qubit | Probability: 0.4999998528510332, Mesured: 1
+Qubit | Probability: 0.4999998528510332, Mesured: 1
+Qubit | Probability: 0.4999998528510332, Mesured: 1
+Qubit | Probability: 0.4999998528510332, Mesured: 0
+Qubit | Probability: 0.4999998528510332, Mesured: 0
+Qubit | Probability: 0.955899715423584, Mesured: 1
+```
+
+![wall](./images/network.png)
