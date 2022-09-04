@@ -9,6 +9,7 @@ Quantum Algorithms with Java and Strange
 - [StrangeFX](https://github.com/redfx-quantum/strangefx)
 - [Quantum Computing samples in Java](https://github.com/johanvos/quantumjava)
 - [How to Install Maven on Linux (Ubuntu)](https://www.digitalocean.com/community/tutorials/install-maven-linux-ubuntu)
+- [Quantum Logic Gate](https://en.wikipedia.org/wiki/Quantum_logic_gate)
 
 ## Instructions
 
@@ -131,10 +132,51 @@ Qubit | Probability: 0.4999999701976776, Mesured: 0
 
 ### Quantum Teleportation
 
+Teleporting a Qubit from Alice to Bob.
+
 ```bash
-mvn clean javafx:run --quiet --file teleportation.xml
-```
-```bash
+mvn clean javafx:run --quiet --file teleport.xml
 ```
 
-![wall](./images/teleportation.jpg)
+The last Qubit is guaranteed to always be 0. That means the 0 was teleported from Alice to Bob.
+
+```bash
+Qubit | Probability: 0.4999999403953552, Mesured: 0
+Qubit | Probability: 0.4999999403953552, Mesured: 1
+Qubit | Probability: 0.0, Mesured: 0
+```
+
+![wall](./images/teleport.jpg)
+
+Now, initializing the first Qubit to 1.
+
+```bash
+mvn clean javafx:run --quiet --file teleport1.xml
+```
+
+Now, the value 1 has been teleported from Alice to Bob.
+
+```bash
+Qubit | Probability: 0.4999999403953552, Mesured: 1
+Qubit | Probability: 0.4999999403953552, Mesured: 0
+Qubit | Probability: 0.9999998807907104, Mesured: 1
+```
+
+![wall](./images/teleport1.jpg)
+
+Now, initializing the first Qubit to 53%.
+
+```bash
+mvn clean javafx:run --quiet --file teleport53.xml
+```
+
+Now, the value 0.53 has been teleported from Alice to Bob after applying the formula `1 - 0.53 * 0.53 = 0.719`.
+
+```bash
+Qubit | Probability: 0.4999999403953552, Mesured: 1
+Qubit | Probability: 0.4999999403953552, Mesured: 0
+Qubit | Probability: 0.7190999388694763, Mesured: 0
+```
+
+![wall](./images/teleport53.jpg)
+
