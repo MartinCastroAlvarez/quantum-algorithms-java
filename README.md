@@ -60,7 +60,7 @@ Verifing the Maven installation
 mvn -version
 ```
 
-## Algorithms
+## Quantum Algorithms
 
 ### Quantum Superposition
 
