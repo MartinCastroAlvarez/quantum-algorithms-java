@@ -96,9 +96,19 @@ Entangling 2 Qubits in superposition to create a Bell state using a `Hadamard` g
 ```bash
 mvn clean javafx:run --quiet --file bell.xml
 ```
+
+This results on both Qubits being either 0 or 1.
+
 ```bash
 Qubit | Probability: 0.4999999701976776, Mesured: 0
 Qubit | Probability: 0.4999999701976776, Mesured: 0
+```
+
+or
+
+```bash
+Qubit | Probability: 0.4999999701976776, Mesured: 1
+Qubit | Probability: 0.4999999701976776, Mesured: l
 ```
 
 ![wall](./images/bell.png)
