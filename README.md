@@ -239,7 +239,7 @@ The inverter can be used to teleport a Qubit while only applying the `CNOT` and 
 mvn clean javafx:run --quiet --file swap.xml
 ```
 
-The message `0.r1` is teleported from Alice to Bob after swapping the state of the first 2 Qubits.
+The message `0.41` is teleported from Alice to Bob after swapping the state of the first 2 Qubits.
 
 ```bash
 Qubit | Probability: 0.5, Mesured: 0
@@ -248,3 +248,93 @@ Qubit | Probability: 0.8319000005722046, Mesured: 1
 ```
 
 ![wall](./images/swap.png)
+
+### Quantum Adder
+
+Summing the value of 2 Qubits using a `Toffoli` gate. The first Qubit is kept to guarantee the Quantum Reversibility Principle. The last Qubit is the carry bit.
+
+![wall](./images/toffoli.png)
+
+```bash
+mvn clean javafx:run --quiet --file adder00.xml
+```
+
+Two `|0>` Qubits sum `|00>`.
+
+```bash
+Qubit | Probability: 0.0, Mesured: 0
+Qubit | Probability: 0.0, Mesured: 0
+Qubit | Probability: 0.0, Mesured: 0
+```
+
+![wall](./images/adder00.png)
+
+Adding two `|1>` Qubits:
+
+```bash
+mvn clean javafx:run --quiet --file adder11.xml
+```
+
+Two `|1>` Qubits sum `|10>`.
+
+```bash
+Qubit | Probability: 0.0, Mesured: 0
+Qubit | Probability: 1.0, Mesured: 1
+Qubit | Probability: 1.0, Mesured: 1
+```
+
+![wall](./images/adder11.png)
+
+Adding `|1>` + `|0>` + `|0>`:
+
+```bash
+mvn clean javafx:run --quiet --file adder100.xml
+```
+
+The sum of `|1>` + `|0>` + `|0>` results in `|01>` (The last 2 Qubits):
+
+```bash
+Qubit | Probability: 0.0, Mesured: 0
+Qubit | Probability: 0.0, Mesured: 0
+Qubit | Probability: 0.0, Mesured: 0
+Qubit | Probability: 0.0, Mesured: 0
+Qubit | Probability: 1.0, Mesured: 1
+```
+
+![wall](./images/adder100.png)
+
+Adding `|1>` + `|0>` + `|1>`:
+
+```bash
+mvn clean javafx:run --quiet --file adder101.xml
+```
+
+The sum of `|1>` + `|0>` + `|1>` results in `|10>` (the last 2 Qubits):
+
+```bash
+Qubit | Probability: 0.0, Mesured: 0
+Qubit | Probability: 1.0, Mesured: 1
+Qubit | Probability: 0.0, Mesured: 0
+Qubit | Probability: 0.0, Mesured: 0
+Qubit | Probability: 1.0, Mesured: 1
+```
+
+![wall](./images/adder101.png)
+
+Adding `|1>` + `|1>` + `|1>`:
+
+```bash
+mvn clean javafx:run --quiet --file adder111.xml
+```
+
+The sum of `|1>` + `|1>` + `|1>` results in `|11>` (The last 2 Qubits):
+
+```bash
+Qubit | Probability: 0.0, Mesured: 0
+Qubit | Probability: 1.0, Mesured: 1
+Qubit | Probability: 0.0, Mesured: 0
+Qubit | Probability: 1.0, Mesured: 1
+Qubit | Probability: 1.0, Mesured: 1
+```
+
+![wall](./images/adder111.png)
