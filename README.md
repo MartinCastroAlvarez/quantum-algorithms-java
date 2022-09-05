@@ -67,6 +67,8 @@ mvn -version
 
 Putting a Qubit into superposition using a `Hadarmard` gate.
 
+![wall](./images/hadamard.png)
+
 ```bash
 mvn clean javafx:run --quiet --file superposition.xml
 ```
@@ -79,6 +81,8 @@ Qubit | Probability: 0.4999999701976776, Mesured: 0
 ### Quantum Entanglement
 
 Entangling 2 Qubits using a `CNOT` gate.
+
+![wall](./images/cnot.png)
 
 ```bash
 mvn clean javafx:run --quiet --file entanglement.xml
@@ -113,6 +117,8 @@ Qubit | Probability: 0.4999999701976776, Mesured: l
 
 Adding an additional `X` gate to the second Qubit.
 
+![wall](./images/xgate.png)
+
 ```bash
 mvn clean javafx:run --quiet --file bell2.xml
 ```
@@ -132,7 +138,9 @@ Qubit | Probability: 0.4999999701976776, Mesured: 0
 
 ### Quantum Teleportation
 
-Teleporting a Qubit from Alice to Bob.
+Teleporting a Qubit from Alice to Bob by combining `Hadamard` and `CNOT` gates as well as a `CZ` gate.
+
+![wall](./images/cz.png)
 
 ```bash
 mvn clean javafx:run --quiet --file teleport.xml
@@ -205,3 +213,38 @@ Qubit | Probability: 0.955899715423584, Mesured: 1
 ```
 
 ![wall](./images/network.png)
+
+### Quantum Inverter
+
+Inverting the state of 2 Qubits by applying 3 consecutive `CNOT` gates.
+
+```bash
+mvn clean javafx:run --quiet --file inverter.xml
+```
+
+The message `0.2` and `0.5` have been inverted after applying the formulas: `1 - 0.2 * 0.2 = 0.96` and `1 - 0.5 * 0.5 = 0.75`.
+
+```bash
+Qubit | Probability: 0.9599999040365219, Mesured: 1
+Qubit | Probability: 0.7499999087303877, Mesured: 1
+```
+
+![wall](./images/inverter.png)
+
+The inverter can be used to teleport a Qubit while only applying the `CNOT` and `CZ` gates to contiguous gates so that they can be easily calculated mathematically.
+
+![wall](./images/sgate.png)
+
+```bash
+mvn clean javafx:run --quiet --file swap.xml
+```
+
+The message `0.r1` is teleported from Alice to Bob after swapping the state of the first 2 Qubits.
+
+```bash
+Qubit | Probability: 0.5, Mesured: 0
+Qubit | Probability: 0.5, Mesured: 0
+Qubit | Probability: 0.8319000005722046, Mesured: 1
+```
+
+![wall](./images/swap.png)
